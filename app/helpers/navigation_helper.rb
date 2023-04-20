@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+# Helper
+module NavigationHelper
+  def collapsible_links_partial_path
+    if user_signed_in?
+      'layouts/navigation/collapsible_elements/signed_link_links'
+    else
+      'layouts/navigation/collapsible_elements/not_signed_link_links'
+    end
+  end
+end
